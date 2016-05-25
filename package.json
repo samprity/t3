@@ -1,0 +1,23 @@
+{
+  "name": "t3",
+  "version": "1.0.0",
+  "description": "task tracking tree",
+  "main": "t3.js",
+  "scripts": {
+    "test": "node t3.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumarpiyush/t3.git"
+  },
+  "author": "Piyush Kumar",
+  "license": "SEE LICENCE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/kumarpiyush/t3/issues"
+  },
+  "homepage": "https://github.com/kumarpiyush/t3#readme",
+  "dependencies": {
+    "hapi": "^13.4.1",
+    "inert": "^4.0.0"
+  }
+}
