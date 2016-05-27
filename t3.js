@@ -8,6 +8,23 @@ server.connection({ port: 8080 });
 server.register(require('inert'),(exp) => {
     if(exp) throw exp;
 
+    // Default index.html routes
+    server.route({
+        method:'GET',
+        path:'/pages/',
+        handler: function(request, reply){
+            reply.file('./pages/index.html');
+        }
+    });
+    server.route({
+        method:'GET',
+        path:'/pages',
+        handler: function(request, reply){
+            reply.file('./pages/index.html');
+        }
+    });
+
+    // All pages routes
     server.route({
         method:'GET',
         path:'/pages/{path}',
