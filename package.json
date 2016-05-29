@@ -4,7 +4,7 @@
   "description": "task tracking tree",
   "main": "t3.js",
   "scripts": {
-    "test": "node t3.js"
+    "start": "node t3.js"
   },
   "repository": {
     "type": "git",
