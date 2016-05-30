@@ -1,5 +1,9 @@
 'use strict';
 
+var Api = {
+    Get : require('./api/get.js')
+}
+
 const Hapi = require('hapi');
 
 const server = new Hapi.Server();
@@ -24,10 +28,18 @@ server.register(require('inert'),(exp) => {
         }
     });
 
-    // All pages routes
     server.route({
         method:'GET',
-        path:'/pages/{path}',
+        path:'/api/get',
+        handler: function(request, reply){
+            reply(Api.Get.GetTasks());
+        }
+    });
+
+    // All "pages" routes
+    server.route({
+        method:'GET',
+        path:'/pages/{path*}',
         handler: function(request, reply){
             reply.file('./pages/'+request.params.path);
         }
