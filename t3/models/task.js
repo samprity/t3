@@ -2,6 +2,7 @@
 
 // The class Task
 // id : identifier of the task
+// title : the title of the task
 // done : true iff the task has been completed
 // children : a list of Task which are children of the Task being created
 
