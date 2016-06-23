@@ -5,8 +5,9 @@
 // done : true iff the task has been completed
 // children : a list of Task which are children of the Task being created
 
-var Task = function(id, done, children) {
+var Task = function(id, title, done, children) {
     this.Id = id;
+    this.Title = title;
     this.Done = done;
     this.SubTasks = children===undefined ? [] : children;
 
